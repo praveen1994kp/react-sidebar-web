@@ -1,6 +1,9 @@
 import React, { createRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import CollapseIcon from './CollapseIcon'
+import DefaultNavIcon from './DefaultNavIcon'
+import ExpandIcon from './ExpandIcon'
 import { NavItemsContainer } from './NavItemsContainer'
 
 const ExpandControlLink = styled.a`
@@ -19,7 +22,20 @@ width: 2.5rem;
 margin-right: 1rem;
 `
 
-function ExpandableNavItem({ children, label }) {
+
+const NavItemContainer = styled.li`
+span {
+white-space: nowrap;
+overflow: hidden;
+}
+
+a {
+    display: flex;
+    flex-wrap: nowrap;
+}
+`
+
+function ExpandableNavItem({ children, label, icon }) {
     const [height, setHeight] = useState(0)
     const content = createRef(null)
 
@@ -33,10 +49,18 @@ function ExpandableNavItem({ children, label }) {
         })
     }
 
+    const isCollapsed = height === 0
+
     return (
         <>
-            <ExpandControlLink onClick={handleExpandToggle} href='#'><span>{label}</span></ExpandControlLink>
-            <Expandable style={{height: `${height}px`}}>
+            <ExpandControlLink onClick={handleExpandToggle} href='#'>
+                <IconContainer>
+                    {isCollapsed ? <ExpandIcon width='0.75rem' />
+                        : <CollapseIcon width='0.75rem' />}
+                </IconContainer>
+                <span>{label}</span>
+            </ExpandControlLink>
+            <Expandable style={{ height: `${height}px` }}>
                 <NavItemsContainer ref={content}>
                     {children}
                 </NavItemsContainer>
@@ -45,25 +69,25 @@ function ExpandableNavItem({ children, label }) {
     )
 }
 
-export function NavItem({ children, to, label, icon }) {
+export function NavItem({ children, to, label, icon = <DefaultNavIcon width='0.75rem' /> }) {
     if (children) {
         return (
-            <li>
+            <NavItemContainer>
                 <ExpandableNavItem label={label}>
                     {children}
                 </ExpandableNavItem>
-            </li>
+            </NavItemContainer>
         )
     }
 
     return (
-        <li>
+        <NavItemContainer>
             <Link to={to}>
                 <IconContainer>
                     {icon}
                 </IconContainer>
                 <span>{label}</span>
             </Link>
-        </li>
+        </NavItemContainer>
     )
 }
