@@ -19,6 +19,13 @@ width: max-content;
 overflow-x: hidden;
 box-shadow: var(--box-shadow-6dp);
 
+nav {
+    max-height: 80vh;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 &:hover {
     min-width: 15rem;   
     background: var(--primary-color);

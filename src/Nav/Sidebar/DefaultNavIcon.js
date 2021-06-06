@@ -1,22 +1,22 @@
 import React from 'react'
 
 function DefaultNavIcon(props) {
-    return (
-      <svg
-        aria-hidden="true"
-        data-prefix="fas"
-        data-icon="chevron-right"
-        className="chevron-right-solid_(1)_svg__svg-inline--fa chevron-right-solid_(1)_svg__fa-chevron-right chevron-right-solid_(1)_svg__fa-w-10"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 320 512"
-        {...props}
-      >
-        <path
-          fill="currentColor"
-          d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
-        />
-      </svg>
-    );
-  }
-  
-  export default DefaultNavIcon;
+  return (
+    <svg
+      aria-hidden="true"
+      data-prefix="fas"
+      data-icon="tag"
+      className="tag-solid_svg__svg-inline--fa tag-solid_svg__fa-tag tag-solid_svg__fa-w-16"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      {...props}
+    >
+      <path
+        fill="currentColor"
+        d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0133.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 010 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"
+      />
+    </svg>
+  );
+}
+
+export default DefaultNavIcon;

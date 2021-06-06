@@ -10,8 +10,8 @@ export const IconContainer = styled.picture`
 display: inline-grid;
 place-items: center;
 width: 1.75rem;
+height: 1.75rem;
 margin-left: 0.5rem;
-padding: 0.25rem;
 margin-right: 1rem;
 `
 
@@ -39,7 +39,7 @@ a.active {
 `
 
 const ExpandableContainer = styled.div`
-overflow-y: auto;
+overflow-y: ${props => props.collapsed ? 'auto' : 'visible'};
 transition: height var(--transition-settings-1, 0.25s cubic-bezier(0.075, 0.82, 0.165, 1));
 `
 
@@ -65,7 +65,7 @@ export function ExpandableNavItem({ children, label }) {
                 </IconContainer>
                 <span>{label}</span>
             </a>
-            <ExpandableContainer style={{height}}>
+            <ExpandableContainer collapsed={isCollapsed} style={{height}}>
                 <NavItemsContainer ref={content}>
                     {children}
                 </NavItemsContainer>
