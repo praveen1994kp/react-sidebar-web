@@ -1,4 +1,4 @@
-# react-sidebar
+# react-sidebar-web
 
  
 
