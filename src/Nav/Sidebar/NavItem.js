@@ -1,6 +1,6 @@
-import React, { createRef, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom';
-import styled from 'styled-components';
+import React, { createRef, useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import styled, { keyframes } from 'styled-components';
 import { NavItemsContainer } from '../../common/styles';
 import CollapseIcon from './CollapseIcon';
 import DefaultNavIcon from './DefaultNavIcon';
@@ -38,9 +38,20 @@ a.active {
 }
 `
 
+const delayOverflow = keyframes`
+from {
+    overflow-y: auto;
+}
+`
+
 const ExpandableContainer = styled.div`
-overflow-y: ${props => props.collapsed ? 'auto' : 'visible'};
+overflow-y: auto;
 transition: height var(--transition-settings-1, 0.25s cubic-bezier(0.075, 0.82, 0.165, 1));
+
+&.overflow {
+    overflow-y: visible;
+    animation: ${delayOverflow} 0.5s;
+}
 `
 
 export function ExpandableNavItem({ children, label }) {
@@ -65,7 +76,7 @@ export function ExpandableNavItem({ children, label }) {
                 </IconContainer>
                 <span>{label}</span>
             </a>
-            <ExpandableContainer collapsed={isCollapsed} style={{height}}>
+            <ExpandableContainer className={!isCollapsed && 'overflow'} style={{height}}>
                 <NavItemsContainer ref={content}>
                     {children}
                 </NavItemsContainer>
