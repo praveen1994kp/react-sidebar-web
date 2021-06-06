@@ -24,7 +24,7 @@ box-shadow: var(--box-shadow-6dp, 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rg
 }
 
 *::-webkit-scrollbar {
-    width: 0.35rem;
+    width: 0rem;
 }
 
 *::-webkit-scrollbar-track {
@@ -65,6 +65,10 @@ nav {
 
     ${NavItemsContainer} {
         padding: 1.5rem .5rem .5rem 1rem;
+    }
+
+    *::-webkit-scrollbar {
+        width: 0.35rem;
     }
 }
 
