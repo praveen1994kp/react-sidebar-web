@@ -19,6 +19,23 @@ width: max-content;
 overflow-x: hidden;
 box-shadow: var(--box-shadow-6dp);
 
+* {
+    overscroll-behavior: contain;
+}
+
+*::-webkit-scrollbar {
+    width: 0.35rem;
+}
+
+*::-webkit-scrollbar-track {
+    display: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary-accent);
+  border-radius: 30%;
+}
+
 nav {
     max-height: 80vh;
     height: 100%;
@@ -56,7 +73,7 @@ nav {
 }
 `
 
-export function Sidebar ({children}) {
+export function Sidebar({ children }) {
     return (
         <Container>
             <nav>
