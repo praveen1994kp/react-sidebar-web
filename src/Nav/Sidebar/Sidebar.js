@@ -64,7 +64,7 @@ nav {
     }
 
     ${NavItemsContainer} {
-        padding: 1.5rem .5rem .5rem 1rem;
+        padding: 0.5rem .5rem .5rem 1rem;
     }
 
     *::-webkit-scrollbar {

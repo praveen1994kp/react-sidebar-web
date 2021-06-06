@@ -38,7 +38,13 @@ export function Application() {
                             <NavItem to='/subscription-1' label='Playlist-1' exact />
                             <NavItem to='/subscription-2' label='Playlist-2' exact />
                             <NavItem label='Group'>
-                                <NavItem to='/subscription-3' label='Playlist-3' exact />
+                                <NavItem label='Group'>
+                                    <NavItem label='Group'>
+                                        <NavItem label='Group'>
+                                            <NavItem to='/subscription-3' label='Playlist-3' exact />
+                                        </NavItem>
+                                    </NavItem>
+                                </NavItem>
                             </NavItem>
                         </NavItem>
                     </NavItemsContainer>
