@@ -3,6 +3,8 @@
  
 
 Simple gmail-like, themable sidebar using react, with support for react router.
+Targetted only for desktop viewports and modern browsers(chrome). Optimization for smaller viewports to be done on future release.
+
 Sample Application deployed at https://react-sidebar-sigma.vercel.app/
 
 ### Getting Started
@@ -14,7 +16,8 @@ Or
 ~~~
 yarn add react-sidebar-web
 ~~~
-**Important:** [styled-components](https://styled-components.com/) (>= 5.0.0) needs to be installed and enabled in project in order to get react-sidebar-web running
+**Important:** [styled-components](https://styled-components.com/) (>= 5.0.0) needs to be installed and enabled in project in order to get react-sidebar-web running.
+
 
 Components styles can be customized by setting the following css-custom variables:
 ~~~
@@ -80,7 +83,7 @@ Background surface and text color can be customized by setting the following css
 --on-primary-surface: #000;
 ~~~  
 ##### Props:
-**logo**: Pass logo icon to be displayed as react component
-**logoText**: Logo text - Will be displayed in h4
-**children**: Pass any links/searchbar that needs to displayed in header as react component
+- **logo**: Pass logo icon to be displayed as react component
+- **logoText**: Logo text - Will be displayed in h4
+- **children**: Pass any links/searchbar that needs to displayed in header as react component
 
