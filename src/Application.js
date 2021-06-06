@@ -34,7 +34,13 @@ export function Application() {
                     <NavItemsContainer>
                         <NavItem to='/' label='Home' exact />
                         <NavItem to='/explore' label='Explore' exact />
-                        <NavItem to='/subscription-1' label='Playlists' exact />
+                        <NavItem label='Playlists'>
+                            <NavItem to='/subscription-1' label='Playlist-1' exact />
+                            <NavItem to='/subscription-2' label='Playlist-2' exact />
+                            <NavItem label='Group'>
+                                <NavItem to='/subscription-3' label='Playlist-3' exact />
+                            </NavItem>
+                        </NavItem>
                     </NavItemsContainer>
                 </Sidebar>
                 <main>

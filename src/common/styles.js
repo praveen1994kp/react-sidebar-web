@@ -11,5 +11,5 @@ grid-auto-flow: row;
 gap: 0.15rem;
 list-style-type: none;
 padding: 1.5rem .5rem .5rem 0rem;
-transition: padding var(----transition-settings-1);
+transition: padding var(----transition-settings-1, 0.25s cubic-bezier(0.075, 0.82, 0.165, 1));
 `
