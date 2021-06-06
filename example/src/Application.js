@@ -1,10 +1,7 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import styled from 'styled-components'
-import { NavItemsContainer } from './common/styles'
-import { Header } from './Nav/Header/Header'
-import { NavItem } from './Nav/Sidebar/NavItem'
-import { Sidebar } from './Nav/Sidebar/Sidebar'
+import {Header, Sidebar, NavItemsContainer, NavItem} from 'react-sidebar-web'
 import { Pages } from './Pages'
 import BrandIcon from './samples/BrandIcon'
 
