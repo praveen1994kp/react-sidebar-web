@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { NavItemsContainer } from '../../common/styles'
 import { IconContainer, NavItemContainer } from './NavItem'
 
 const Container = styled.section`
@@ -36,6 +37,10 @@ box-shadow: var(--box-shadow-6dp);
     a.active ${IconContainer} {
         background: inherit;
         border-radius: 0%;
+    }
+
+    ${NavItemsContainer} {
+        padding: 1.5rem .5rem .5rem 1rem;
     }
 }
 
