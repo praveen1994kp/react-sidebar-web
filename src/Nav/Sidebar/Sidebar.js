@@ -43,7 +43,8 @@ nav {
 }
 
 &:hover {
-    min-width: 15rem;   
+    min-width: 15rem;
+    max-width: max-content;  
     background: var(--primary-color, #2196F3);
     color: var(--on-primary-color, #FFF);
 

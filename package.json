@@ -1,11 +1,11 @@
 {
   "name": "react-sidebar-web",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple gmail like sidebar for modern browsers.",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",
-    "build:watch": "babel src -d ./example/node_modules/react-sidebar/dist --watch"
+    "build:watch": "babel src -d ./example/node_modules/react-sidebar-web/dist --watch"
   },
   "repository": {
     "type": "git",
