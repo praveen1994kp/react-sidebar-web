@@ -29,6 +29,7 @@ a {
     color: inherit;
     text-decoration: none;
     transition: all var(--transition-settings-1, 0.25s cubic-bezier(0.075, 0.82, 0.165, 1));
+    cursor: pointer;
 }
 a.active {
     ${IconContainer} {
