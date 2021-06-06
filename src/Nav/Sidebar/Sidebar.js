@@ -11,13 +11,13 @@ bottom: 0;
 left: 0;
 min-width: 3rem;
 max-width: 3rem;
-background: var(--primary-surface);
-color: var(--on-primary-surface);
-transition: all var(--transition-settings-1);
+background: var(--primary-surface, #FFF);
+color: var(--on-primary-surface, #000);
+transition: all var(--transition-settings-1, 0.25s cubic-bezier(0.075, 0.82, 0.165, 1));
 z-index: 400;
 width: max-content;
 overflow-x: hidden;
-box-shadow: var(--box-shadow-6dp);
+box-shadow: var(--box-shadow-6dp, 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20));
 
 * {
     overscroll-behavior: contain;
@@ -32,7 +32,7 @@ box-shadow: var(--box-shadow-6dp);
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: var(--primary-accent);
+  background-color: var(--primary-accent, #009688);
   border-radius: 30%;
 }
 
@@ -45,16 +45,16 @@ nav {
 
 &:hover {
     min-width: 15rem;   
-    background: var(--primary-color);
-    color: var(--on-primary-color);
+    background: var(--primary-color, #2196F3);
+    color: var(--on-primary-color, #FFF);
 
     ${NavItemContainer} a:hover {
-        background: var(--primary-accent);
-        color: var(--on-primary-accent);
+        background: var(--primary-accent, #009688);
+        color: var(--on-primary-accent, #FFF);
     }
     ${NavItemContainer} a.active {
-        background: var(--light-primary-color);
-        color: var(--on-light-primary-color);
+        background: var(--light-primary-color, #BBDEFB);
+        color: var(--on-light-primary-color, #000);
     }
 
     a ${IconContainer},

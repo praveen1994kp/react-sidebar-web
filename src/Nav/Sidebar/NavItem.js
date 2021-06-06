@@ -28,11 +28,11 @@ a {
     flex-wrap: nowrap;
     color: inherit;
     text-decoration: none;
-    transition: all var(--transition-settings-1);
+    transition: all var(--transition-settings-1, 0.25s cubic-bezier(0.075, 0.82, 0.165, 1));
 }
 a.active {
     ${IconContainer} {
-        background: var(--primary-accent);
+        background: var(--primary-accent, #009688);
         border-radius: 50%;
     }
 }
