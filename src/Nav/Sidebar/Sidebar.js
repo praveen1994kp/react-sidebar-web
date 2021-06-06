@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { NavItemsContainer } from '../../common/styles'
-import { IconContainer, NavItemContainer } from './NavItem'
+import { IconContainer, NavItemContainer, NavItemsContainer } from './NavItem'
 
 const Container = styled.section`
 position: fixed;
