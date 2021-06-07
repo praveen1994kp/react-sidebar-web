@@ -1,6 +1,6 @@
 {
   "name": "react-sidebar-web",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Simple gmail like sidebar for modern browsers.",
   "main": "dist/index.js",
   "scripts": {

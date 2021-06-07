@@ -31,7 +31,7 @@ overflow: hidden;
 }
 
 a {
-    padding: 0.5rem 1rem 0.5rem 0rem;
+    padding: 0.15rem 1rem 0.15rem 0rem;
     border-radius: 0.5rem;
     display: flex;
     flex-wrap: nowrap;
