@@ -60,6 +60,7 @@ nav {
     a ${IconContainer},
     a.active ${IconContainer} {
         background: inherit;
+        color: inherit;
         border-radius: 0%;
     }
 

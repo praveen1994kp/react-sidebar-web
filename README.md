@@ -35,6 +35,8 @@ Components styles can be customized by setting the following css-custom variable
 --on-primary-surface: #000;
 ~~~
 
+The **z-index** of sidebar is **400**. UI elements that need to show on top needs to have a z-index greater than this.
+
 #### Rendering the Sidebar:
 
 Sample sidebar

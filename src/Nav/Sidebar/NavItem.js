@@ -32,6 +32,7 @@ overflow: hidden;
 
 a {
     padding: 0.15rem 1rem 0.15rem 0rem;
+    margin-top: 0.25rem;
     border-radius: 0.5rem;
     display: flex;
     flex-wrap: nowrap;
@@ -43,6 +44,7 @@ a {
 a.active {
     ${IconContainer} {
         background: var(--primary-accent, #009688);
+        color: var(--on-primary-accent, #FFF);
         border-radius: 50%;
     }
 }
