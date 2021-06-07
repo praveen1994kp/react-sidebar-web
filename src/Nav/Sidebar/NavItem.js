@@ -36,6 +36,7 @@ a {
     border-radius: 0.5rem;
     display: flex;
     flex-wrap: nowrap;
+    align-items: center;
     color: inherit;
     text-decoration: none;
     transition: all var(--transition-settings-1, 0.25s cubic-bezier(0.075, 0.82, 0.165, 1));
