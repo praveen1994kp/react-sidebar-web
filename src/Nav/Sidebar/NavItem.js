@@ -18,8 +18,8 @@ transition: padding var(----transition-settings-1, 0.25s cubic-bezier(0.075, 0.8
 export const IconContainer = styled.picture`
 display: inline-grid;
 place-items: center;
-width: 1.75rem;
-height: 1.75rem;
+width: var(--icon-container-size, 1.75rem);
+height: var(--icon-container-size, 1.75rem);
 margin-left: 0.5rem;
 margin-right: 1rem;
 `

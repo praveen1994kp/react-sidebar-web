@@ -33,6 +33,7 @@ Components styles can be customized by setting the following css-custom variable
 --on-primary-color: #FFF;
 --primary-surface: #FFF;
 --on-primary-surface: #000;
+--icon-container-size: 2rem;
 ~~~
 
 The **z-index** of sidebar is **400**. UI elements that need to show on top needs to have a z-index greater than this.

@@ -18,7 +18,7 @@ const AppContainer = styled.section`
 --on-primary-color: #FFF;
 --primary-surface: #FFF;
 --on-primary-surface: #000;
-
+--icon-container-size: 2rem;
 
 `
 
