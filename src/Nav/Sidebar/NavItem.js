@@ -1,4 +1,4 @@
-import React, { createRef, useState } from 'react';
+import React, { Children, cloneElement, createRef, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import CollapseIcon from './CollapseIcon';
@@ -66,11 +66,16 @@ transition: height var(--transition-settings-1, 0.25s cubic-bezier(0.075, 0.82, 
 }
 `
 
-export function ExpandableNavItem({ children, label }) {
+export function ExpandableNavItem({ children, label, expand }) {
     const [height, setHeight] = useState(0)
     const content = createRef()
 
     const isCollapsed = height === 0
+
+    const expandGroup = () => {
+        setHeight(content.current.clientHeight)
+        typeof expand === 'function' && expand()
+    }
 
     const toggleExpand = () => {
         setHeight(prevHeight => {
@@ -88,22 +93,45 @@ export function ExpandableNavItem({ children, label }) {
                 </IconContainer>
                 <span>{label}</span>
             </a>
-            <ExpandableContainer className={!isCollapsed && 'overflow'} style={{height}}>
+            <ExpandableContainer className={!isCollapsed && 'overflow'} style={{ height }}>
                 <NavItemsContainer ref={content}>
-                    {children}
+                    {Children.map(children, child => {
+                        const { props } = child
+
+                        return cloneElement(child, { ...props, expand: expandGroup })
+                    })}
                 </NavItemsContainer>
             </ExpandableContainer>
         </ NavItemContainer>
     )
 }
 
-export function NavItem({ children, to, label, icon = <DefaultNavIcon width='0.75rem' />, ...props }) {
+const scrollElementIntoViewAfterDelay = (element, delay = 300) => {
+    setTimeout(() => {
+        element.scrollIntoView({behavior: 'smooth'})
+    }, delay)
+}
 
-    if (children) return <ExpandableNavItem label={label}>{children}</ExpandableNavItem>
+export function NavItem({ children, to, label, icon = <DefaultNavIcon width='0.75rem' />, expand, ...props }) {
+
+    const item = createRef()
+
+    useEffect(() => {
+        try {
+            if (!children && window.location.pathname === to) {
+                typeof expand === 'function' && expand()
+                scrollElementIntoViewAfterDelay(item.current)
+            }
+        } catch (ex) {
+            console.error('Cannot expand and scroll to nav link', ex)
+        }
+    }, [])
+
+    if (children) return <ExpandableNavItem expand={expand} label={label}>{children}</ExpandableNavItem>
 
     return (
         <NavItemContainer>
-            <NavLink to={to} activeClassName='active' {...props}>
+            <NavLink ref={item} to={to} activeClassName='active' {...props}>
                 <IconContainer>
                     {icon}
                 </IconContainer>
