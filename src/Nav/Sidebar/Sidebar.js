@@ -13,7 +13,7 @@ max-width: 3rem;
 background: var(--primary-surface, #FFF);
 color: var(--on-primary-surface, #000);
 transition: all var(--transition-settings-1, 0.25s cubic-bezier(0.075, 0.82, 0.165, 1));
-z-index: 400;
+z-index: var(--sidebar-z-index, 400);
 width: max-content;
 overflow-x: hidden;
 box-shadow: var(--box-shadow-6dp, 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20));

@@ -10,7 +10,7 @@ padding: 0.5rem 1rem;
 display: grid;
 grid-template-columns: 25% 1fr;
 box-shadow: var(--box-shadow-9dp, 0 9px 12px 1px rgba(0,0,0,0.14), 0 3px 16px 2px rgba(0,0,0,0.12), 0 5px 6px -3px rgba(0,0,0,0.20));
-z-index: 500;
+z-index: var(--header-z-index, 500);
 position: relative;
 
 & > picture {

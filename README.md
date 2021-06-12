@@ -2,7 +2,7 @@
 
  
 
-Simple gmail-like, themable sidebar using react, with support for react router.
+Simple gmail-like, customizable sidebar using react, with support for react router.
 Targetted only for desktop viewports and modern browsers(chrome). Optimization for smaller viewports to be done on future release.
 
 Sample Application deployed at https://react-sidebar-sigma.vercel.app/
@@ -34,9 +34,9 @@ Components styles can be customized by setting the following css-custom variable
 --primary-surface: #FFF;
 --on-primary-surface: #000;
 --icon-container-size: 2rem;
+--sidebar-z-index: 400;
+--header-z-index: 500;
 ~~~
-
-The **z-index** of sidebar is **400**. UI elements that need to show on top needs to have a z-index greater than this.
 
 #### Rendering the Sidebar:
 

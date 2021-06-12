@@ -19,7 +19,8 @@ const AppContainer = styled.section`
 --primary-surface: #FFF;
 --on-primary-surface: #000;
 --icon-container-size: 2rem;
-
+--sidebar-z-index: 400;
+--header-z-index: 500;
 `
 
 export function Application() {
