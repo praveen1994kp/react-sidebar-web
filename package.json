@@ -1,6 +1,6 @@
 {
   "name": "react-sidebar-web",
-  "version": "0.0.11",
+  "version": "0.0.13",
   "description": "Simple gmail like sidebar for modern browsers.",
   "main": "dist/index.js",
   "scripts": {
@@ -15,7 +15,18 @@
     "sidebar",
     "nav",
     "tabs",
-    "animated"
+    "animated",
+    "navigation",
+    "react",
+    "links",
+    "routing",
+    "interactive",
+    "hover-based",
+    "web",
+    "front-end",
+    "css",
+    "ui",
+    "user interface"
   ],
   "author": "Praveen Kumaravel <thisispraveenk@gmail.com>",
   "license": "ISC",
