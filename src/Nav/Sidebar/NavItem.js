@@ -12,7 +12,7 @@ grid-auto-flow: row;
 gap: 0.15rem;
 list-style-type: none;
 padding: 0.5rem .5rem .5rem 0rem;
-transition: padding var(----transition-settings-1, 0.25s cubic-bezier(0.075, 0.82, 0.165, 1));
+transition: padding var(----transition-settings-1, 0.2s ease);
 `
 
 export const IconContainer = styled.picture`
@@ -39,8 +39,13 @@ a {
     align-items: center;
     color: inherit;
     text-decoration: none;
-    transition: all var(--transition-settings-1, 0.25s cubic-bezier(0.075, 0.82, 0.165, 1));
+    transition: background var(--transition-settings-1, 0.2s ease);
     cursor: pointer;
+
+    span {
+        opacity: 0;
+        transition: opacity var(--transition-settings-1, 0.2s ease);
+    }
 }
 a.active {
     ${IconContainer} {
@@ -59,7 +64,7 @@ from {
 
 const ExpandableContainer = styled.div`
 overflow-y: auto;
-transition: height var(--transition-settings-1, 0.25s cubic-bezier(0.075, 0.82, 0.165, 1));
+transition: height var(--transition-settings-1, 0.2s ease);
 
 &.overflow {
     overflow-y: visible;

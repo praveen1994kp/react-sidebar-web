@@ -12,7 +12,7 @@ min-width: 3rem;
 max-width: 3rem;
 background: var(--primary-surface, #FFF);
 color: var(--on-primary-surface, #000);
-transition: all var(--transition-settings-1, 0.25s cubic-bezier(0.075, 0.82, 0.165, 1));
+transition: all var(--transition-settings-1, 0.2s ease);
 z-index: var(--sidebar-z-index, 400);
 width: max-content;
 overflow-x: hidden;
@@ -47,6 +47,10 @@ nav {
     max-width: max-content;  
     background: var(--primary-color, #2196F3);
     color: var(--on-primary-color, #FFF);
+
+    ${NavItemContainer} a span {
+        opacity: 1;
+    }
 
     ${NavItemContainer} a:hover {
         background: var(--primary-accent, #009688);

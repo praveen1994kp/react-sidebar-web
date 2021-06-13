@@ -21,7 +21,7 @@ yarn add react-sidebar-web
 
 Components styles can be customized by setting the following css-custom variables:
 ~~~
---transition-settings-1: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+--transition-settings-1: 0.2s ease;
 --box-shadow-6dp: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20);
 --box-shadow-9dp: 0 9px 12px 1px rgba(0,0,0,0.14), 0 3px 16px 2px rgba(0,0,0,0.12), 0 5px 6px -3px rgba(0,0,0,0.20);
 
