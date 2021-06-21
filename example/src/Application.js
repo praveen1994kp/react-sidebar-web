@@ -14,7 +14,7 @@ const AppContainer = styled.section`
 --on-light-primary-color: #000;
 --primary-accent: #009688;
 --on-primary-accent: #FFF;
---primary-color: #2196F3;
+--primary-color: #333;
 --on-primary-color: #FFF;
 --primary-surface: #FFF;
 --on-primary-surface: #000;
