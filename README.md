@@ -36,9 +36,13 @@ Components styles can be customized by setting the following css-custom variable
 --icon-container-size: 2rem;
 --sidebar-z-index: 400;
 --header-z-index: 500;
+--sidebar-max-width: 20vw;
 ~~~
 
 #### Rendering the Sidebar:
+
+Sidebar accepts a single prop **defaultExpanded**.
+When defaultExpanded=true, sidebar stays persistent and pushes the main content to right.
 
 Sample sidebar
 ~~~
