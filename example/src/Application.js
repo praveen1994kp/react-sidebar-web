@@ -21,14 +21,14 @@ const AppContainer = styled.section`
 --icon-container-size: 2rem;
 --sidebar-z-index: 400;
 --header-z-index: 500;
+--sidebar-max-width: 20vw;
 `
 
 export function Application() {
     return (
         <AppContainer>
             <BrowserRouter>
-                <Header logo={<BrandIcon width='1rem' />} logoText='Brand' />
-                <Sidebar>
+                <Sidebar defaultExpanded={false}>
                     <NavItemsContainer>
                         <NavItem to='/' label='Home' exact />
                         <NavItem to='/explore' label='Explore' exact />
