@@ -97,7 +97,7 @@ nav {
 `
 
 
-export function Sidebar({ children, defaultExpanded = false }) {
+export function Sidebar({ children, defaultExpanded = false, hideFooter = false }) {
     const [expandedMode, setExpandedMode] = useState(defaultExpanded)
 
     const toggleExpandMode = () => {
@@ -111,7 +111,7 @@ export function Sidebar({ children, defaultExpanded = false }) {
             <nav>
                 {children}
             </nav>
-            <footer>
+            {!hideFooter && <footer>
                 <NavItemsContainer>
                     <NavItemContainer onClick={toggleExpandMode}>
                         <a>
@@ -120,7 +120,7 @@ export function Sidebar({ children, defaultExpanded = false }) {
                         </a>
                     </NavItemContainer>
                 </NavItemsContainer>
-            </footer>
+            </footer>}
         </Container>
     )
 }

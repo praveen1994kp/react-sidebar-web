@@ -41,8 +41,9 @@ Components styles can be customized by setting the following css-custom variable
 
 #### Rendering the Sidebar:
 
-Sidebar accepts a single prop **defaultExpanded**.
+Sidebar accepts a two props **defaultExpanded** and **hideFooter**.
 When defaultExpanded=true, sidebar stays persistent and pushes the main content to right.
+When hideFooter=true, the toggle between persistent and non persistent mode is hidden.
 
 Sample sidebar
 ~~~
