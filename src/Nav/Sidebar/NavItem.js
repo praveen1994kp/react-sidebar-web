@@ -39,7 +39,6 @@ a {
     align-items: center;
     color: inherit;
     text-decoration: none;
-    transition: background var(--transition-settings-1, 0.2s ease);
     cursor: pointer;
 
     span {
